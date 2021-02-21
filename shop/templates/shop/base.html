@@ -11,10 +11,10 @@
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="{% url 'shop:product_list' %}">
-            MyShop
+            A-A Stores
           </a>
         </div>
-        <p class="navbar-text">Ahorra dinero viví mejor</p>
+        <p class="navbar-text"></p>
 
         {% with total_items=cart|length %}
           {% if cart|length > 0 %}
@@ -26,6 +26,7 @@
             </a>
           </p>
           {% else %}
+            <p class="navbar-text navbar-right"><a href="/auth/logout/">Logout</a></p>
             <p class="navbar-text navbar-right">Your cart is empty.</p>
           {% endif %}
         {% endwith %}
